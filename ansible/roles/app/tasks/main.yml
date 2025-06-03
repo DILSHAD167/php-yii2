@@ -1,0 +1,5 @@
+- name: Pull Docker image
+  shell: docker pull yourdockerhub/yii2-app:latest
+
+- name: Deploy Yii2 Swarm service
+  shell: docker service update --image yourdockerhub/yii2-app:latest yii2-app || docker service create --name yii2-app --publish 8000:80 yourdockerhub/yii2-app:latest
