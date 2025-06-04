@@ -1,6 +1,6 @@
 - hosts: web
   become: yes
   roles:
-    - docker/tasks/main.yml
-    - nginx/tasks/main.yml
-    - app/tasks/main.yml
+    - docker
+    - nginx
+    - app
